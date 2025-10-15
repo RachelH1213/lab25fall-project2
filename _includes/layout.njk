@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or site.title | escape }}</title>
+  <meta name="description" content="{{ site.description | escape }}">
+  <link rel="stylesheet" href="{{ '/styles/styles.css' | url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | url }}">{{ site.title }}</a>
+      <nav class="nav">
+        {% for item in site.nav %}
+          <a href="{{ item.url | url }}">{{ item.text }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><small>© {{ site.footer.year }} · Built with Eleventy.</small></div>
+  </footer>
+
+  <script src="{{ '/assets/js/filter.js' | url }}" defer></script>
+</body>
+</html>

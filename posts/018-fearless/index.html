@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jump Then Fall</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"></a>
+      <nav class="nav">
+        
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="post">
+  <a class="back-link" href="/">← Back to list</a>
+
+  
+  
+  
+
+  <header class="post-header">
+    
+    <figure class="post-hero">
+      <img src="/assets/images/fearless.jpeg" alt="Simple graphic for Jump Then Fall">
+    </figure>
+    
+
+    <div class="post-titlebox">
+      <h1 class="post-title">Jump Then Fall</h1>
+      <div class="meta-row">
+        <time datetime="2025-10-12" class="meta-date">2025-10-12</time>
+        <span class="chip era era-chip" data-era="fearless">fearless</span>
+        <span class="chip">Album: <strong>fearless</strong></span>
+        <span class="chip">Mood: <strong>energetic</strong></span>
+        <span class="chip">Track #1</span>
+        <span class="chip">Version: original</span>
+      </div>
+
+      
+      <div class="chip-row">
+        <span class="chip is-soft">#love</span>
+      </div>
+      
+
+      <div class="cta-row">
+        <button id="copyLink" class="btn ghost" type="button" aria-label="Copy page link">Copy Link</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-body">
+    <p>this opener is a bubbly country‑pop song about diving headfirst into a new relationship. Its upbeat melody and hopeful lyrics make it an instant pick‑me‑up.</p>
+
+  </div>
+
+  
+  <footer class="post-footer">
+    <ul class="tag-list">
+      
+        <li class="tag-chip">type:song</li>
+      
+        <li class="tag-chip">era:fearless</li>
+      
+        <li class="tag-chip">album:fearless-tv</li>
+      
+        <li class="tag-chip">mood:energetic</li>
+      
+        <li class="tag-chip">theme:love</li>
+      
+    </ul>
+  </footer>
+  
+
+  <nav class="post-nav">
+    
+      <a class="prev" href="/posts/021-fortnight/">← Fortnight</a>
+    
+    
+      <a class="next" href="/posts/006-this-is-me-trying/">this is me trying →</a>
+    
+  </nav>
+</article>
+
+<script>
+  (function(){
+    const btn = document.getElementById('copyLink');
+    if(!btn) return;
+    btn.addEventListener('click', async function(){
+      try{
+        await navigator.clipboard.writeText(location.href);
+        btn.textContent = 'Link copied!';
+        setTimeout(()=>btn.textContent='Copy Link', 1400);
+      }catch(e){ btn.textContent = 'Copy failed'; }
+    });
+  })();
+</script>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><small>©  · Built with Eleventy.</small></div>
+  </footer>
+
+  <script src="/assets/js/filter.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "title": "Taylor Swift Collection",
+  "description": "A tiny digital collection of Taylor Swift songs.",
+  "author": "Rachel",
+  "url": "https://<your-github-username>.github.io/assignment-2/",
+  "nav": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "About",
+      "url": "/about/"
+    }
+  ],
+  "footer": {
+    "year": 2025
+  },
+  "eraColors": {
+    "1989": "#c7e2fb",
+    "folklore": "#a9b0a8",
+    "red": "#f9b2b2",
+    "reputation": "#d1d5db",
+    "rep": "#d1d5db",
+    "lover": "#ffd1ea",
+    "evermore": "#d7c0a3",
+    "midnights": "#c2cbe5",
+    "ttpd": "#f1f1f1"
+  }
+}

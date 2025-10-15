@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Picture to Burn</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"></a>
+      <nav class="nav">
+        
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="post">
+  <a class="back-link" href="/">← Back to list</a>
+
+  
+  
+  
+
+  <header class="post-header">
+    
+    <figure class="post-hero">
+      <img src="/assets/images/debut.jpeg" alt="Simple graphic for Picture to Burn">
+    </figure>
+    
+
+    <div class="post-titlebox">
+      <h1 class="post-title">Picture to Burn</h1>
+      <div class="meta-row">
+        <time datetime="2006-10-23" class="meta-date">2006-10-23</time>
+        <span class="chip era era-chip" data-era="debut">debut</span>
+        <span class="chip">Album: <strong>debut</strong></span>
+        <span class="chip">Mood: <strong>energetic</strong></span>
+        <span class="chip">Track #2</span>
+        <span class="chip">Version: original</span>
+      </div>
+
+      
+      <div class="chip-row">
+        <span class="chip is-soft">#breakup</span>
+      </div>
+      
+
+      <div class="cta-row">
+        <button id="copyLink" class="btn ghost" type="button" aria-label="Copy page link">Copy Link</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="post-body">
+    <p>From Swift’s self‑titled debut album, this country‑rock anthem channels teenage anger at an ex‑boyfriend. The fiery lyrics and driving guitars celebrate reclaiming your narrative after a breakup. It’s perfect for moments when you need to sing out your frustrations.</p>
+
+  </div>
+
+  
+  <footer class="post-footer">
+    <ul class="tag-list">
+      
+        <li class="tag-chip">type:song</li>
+      
+        <li class="tag-chip">era:debut</li>
+      
+        <li class="tag-chip">album:debut</li>
+      
+        <li class="tag-chip">mood:energetic</li>
+      
+        <li class="tag-chip">theme:breakup</li>
+      
+    </ul>
+  </footer>
+  
+
+  <nav class="post-nav">
+    
+      <a class="prev" href="/posts/007-fearless/">← Fearless</a>
+    
+    
+  </nav>
+</article>
+
+<script>
+  (function(){
+    const btn = document.getElementById('copyLink');
+    if(!btn) return;
+    btn.addEventListener('click', async function(){
+      try{
+        await navigator.clipboard.writeText(location.href);
+        btn.textContent = 'Link copied!';
+        setTimeout(()=>btn.textContent='Copy Link', 1400);
+      }catch(e){ btn.textContent = 'Copy failed'; }
+    });
+  })();
+</script>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><small>©  · Built with Eleventy.</small></div>
+  </footer>
+
+  <script src="/assets/js/filter.js" defer></script>
+</body>
+</html>

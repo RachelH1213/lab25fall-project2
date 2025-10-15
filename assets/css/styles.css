@@ -1,0 +1,41 @@
+:root{--bg:#0e0f12;--fg:#e7e7ea;--muted:#9aa1aa;--card:#151821;--ring:#3b82f6}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+a{color:#7dd3fc;text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:1rem}
+.site-header,.site-footer{background:#0b0d12;border-bottom:1px solid #1f2430}
+.site-footer{border-top:1px solid #1f2430;border-bottom:none;margin-top:2rem}
+.brand{font-weight:700}.nav a{margin-left:1rem;color:var(--fg)}
+h1,h2{line-height:1.2;margin:0.5rem 0}
+.filters{display:grid;gap:.75rem;margin:1rem 0}
+#search{padding:.6rem .8rem;border-radius:.6rem;border:1px solid #2a3140;background:#0c0f16;color:var(--fg)}
+#search:focus{border-color:var(--ring);box-shadow:0 0 0 3px rgba(59,130,246,.25)}
+.post-list{list-style:none;padding:0;margin:1rem 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.post-card{background:var(--card);border:1px solid #202635;border-radius:.9rem;overflow:hidden}
+.post-card figure{margin:0;height:160px;display:flex;align-items:center;justify-content:center;background:#0f1219;border-bottom:1px solid #202635}
+.post-card img{max-width:100%;max-height:100%}
+.post-card h2{font-size:1rem;padding:.75rem .75rem 0}
+.post-card .meta{color:var(--muted);padding:0 .75rem .9rem}
+.post-title{font-size:2rem}.post-meta{color:var(--muted)}
+.post-figure img{width:100%;border-radius:.5rem;border:1px solid #202635}
+
+/* 分组多选过滤 */
+#filters{display:grid;gap:.5rem;margin-top:.25rem}
+.filter-group{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+.filter-group h3{font-size:.9rem;font-weight:600;margin:.25rem 0;color:var(--muted);width:100%}
+.tag-btn{padding:.35rem .7rem;border:1px solid #2a3140;background:#10131a;color:var(--fg);border-radius:999px;cursor:pointer}
+.tag-btn.small{font-size:.85rem;padding:.3rem .6rem}
+.tag-btn.is-active{border-color:var(--ring)}
+.filter-actions{margin-top:.25rem}
+
+/* Era chips */
+.chips{display:flex;gap:.4rem;flex-wrap:wrap;padding:.35rem .75rem 0}
+.era-chip{display:inline-block;padding:.2rem .5rem;border-radius:999px;font-size:.75rem;font-weight:600;border:1px solid #2a3140;background:#10131a;color:var(--fg)}
+.era-chip[data-era="1989"]{background:#c7e2fb;color:#0b1220;border-color:#7fb8ee}
+.era-chip[data-era="folklore"]{background:#a9b0a8;color:#101313;border-color:#8f978f}
+.era-chip[data-era="red"]{background:#f9b2b2;color:#3a0c0c;border-color:#f87171}
+.era-chip[data-era="reputation"], .era-chip[data-era="rep"]{background:#d1d5db;color:#0c0c0c;border-color:#9ca3af}
+.era-chip[data-era="lover"]{background:#ffd1ea;color:#5b1037;border-color:#ff9ad5}
+.era-chip[data-era="evermore"]{background:#d7c0a3;color:#3a2817;border-color:#b48b57}
+.era-chip[data-era="midnights"]{background:#c2cbe5;color:#12172a;border-color:#8aa1d1}
+.era-chip[data-era="ttpd"]{background:#f1f1f1;color:#0a0a0a;border-color:#cfcfcf}

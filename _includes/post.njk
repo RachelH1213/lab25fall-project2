@@ -1,0 +1,52 @@
+---
+layout: layout.njk
+---
+
+<article class="post-page">
+  <!-- 顶部封面图 -->
+  {% if cover %}
+  <div class="post-hero">
+    <img src="{{ cover | url }}" alt="{{ accessibility_alt | default(title) }}">
+  </div>
+  {% endif %}
+
+  <!-- 内容容器 -->
+  <div class="post-content">
+    <h1 class="post-title">{{ title }}</h1>
+
+    <!-- 基本信息 chips -->
+    <div class="post-meta-chips">
+      {% if era %}<span class="chip">{{ era }}</span>{% endif %}
+      {% if album %}<span class="chip">{{ album }}</span>{% endif %}
+      {% if mood %}<span class="chip">{{ mood }}</span>{% endif %}
+      {% if track_no %}<span class="chip">Track #{{ track_no }}</span>{% endif %}
+      {% if version %}<span class="chip">{{ version }}</span>{% endif %}
+    </div>
+
+    <!-- 主题标签 -->
+    {% if themes %}
+    <div class="post-tags">
+      {% for t in themes %}
+        <span class="tag">#{{ t }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- 正文 -->
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+
+    <!-- 上一篇/下一篇导航（如不需要可以删除） -->
+    <nav class="post-nav">
+      {% set prevPost = collections.posts | getPreviousCollectionItem(page) %}
+      {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+      {% if prevPost %}
+        <a class="prev" href="{{ prevPost.url | url }}">← {{ prevPost.data.title or prevPost.fileSlug }}</a>
+      {% endif %}
+      {% if nextPost %}
+        <a class="next" href="{{ nextPost.url | url }}">{{ nextPost.data.title or nextPost.fileSlug }} →</a>
+      {% endif %}
+    </nav>
+  </div>
+</article>

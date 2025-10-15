@@ -1,0 +1,10 @@
+nav ul{
+    display: flex;
+    flex-direction: row;
+    text-decoration:wavy;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
