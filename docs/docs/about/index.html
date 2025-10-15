@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"></a>
+      <nav class="nav">
+        
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>About this site</h1>
+<p>This is a small, personal <strong>Taylor Swift songs collection</strong> built with <strong>Eleventy</strong>.
+It’s a simple archive where I add song notes over time and keep everything consistent with templates.</p>
+<p><a href="/">← Back to Home</a></p>
+<hr>
+<h2>How to browse</h2>
+<ul>
+<li>The <strong>Home</strong> page shows cards for every post. Use the <strong>search box</strong> and the <strong>filters</strong> at the top.</li>
+<li>Filter logic: <strong>OR</strong> inside a group (e.g. mood), <strong>AND</strong> across groups (e.g. mood + era).</li>
+<li>Click a card to open the post. Each post page has <strong>Prev / Next</strong> and a <strong>Copy Link</strong> button.</li>
+</ul>
+<h2>What’s inside each post</h2>
+<p>Each post is a Markdown file with a small data block (front matter). The main fields are:</p>
+<ul>
+<li><code>title</code>, <code>date</code></li>
+<li><code>cover</code>, <code>thumb</code> (images)</li>
+<li><code>era</code>, <code>album</code>, <code>mood</code>, <code>themes</code></li>
+<li><code>tags</code> (used by filters)</li>
+</ul>
+<h3>Allowed categories</h3>
+<ul>
+<li><strong>mood</strong>: <code>energetic</code>, <code>calm</code>, <code>dark</code>, <code>other</code></li>
+<li><strong>theme</strong>: <code>love</code>, <code>breakup</code>, <code>self</code>, <code>memory</code>, <code>escape</code>, <code>other</code></li>
+</ul>
+<blockquote>
+<p>In <code>tags</code>, I use prefixed values so filters work, for example:
+<code>type:song</code>, <code>era:folklore</code>, <code>album:1989</code>, <code>mood:calm</code>, <code>theme:love</code>.</p>
+</blockquote>
+<h2>Add a new song (quick template)</h2>
+<p>Copy this into a new file in <code>posts/</code> and edit the values:</p>
+<pre><code class="language-md">---
+title: &quot;Song Title&quot;
+date: 2025-10-01
+type: song
+album: 1989
+era: 1989
+mood: calm # energetic | calm | dark | other
+themes: [love] # choose from: love | breakup | self | memory | escape | other
+cover: /assets/images/1989.svg
+thumb: /assets/images/1989.svg
+tags: [type:song, era:1989, album:1989, mood:calm, theme:love]
+layout: post.njk
+---
+
+A short note about why I like this track and when I listen to it.
+</code></pre>
+<h2>Tech &amp; design</h2>
+<ul>
+<li>Built with <strong>Eleventy (11ty)</strong>, <strong>Nunjucks</strong> templates, and <strong>CSS</strong>.</li>
+<li>Global data is in <code>_data/site.json</code>.</li>
+<li>Static files are in <code>assets/</code> and <code>styles/</code>.</li>
+</ul>
+<h2>Credits &amp; disclaimer</h2>
+<p>This is a <strong>fan/education project</strong>. No audio or lyrics are hosted here. Images are simple placeholders for study use.</p>
+<p>If you have feedback, talk to me in class or message me on Canvas. 😊</p>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><small>©  · Built with Eleventy.</small></div>
+  </footer>
+
+  <script src="/assets/js/filter.js" defer></script>
+</body>
+</html>
